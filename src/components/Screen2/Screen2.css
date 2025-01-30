@@ -1,0 +1,109 @@
+.screen-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  overflow: hidden; 
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  flex: 0 0 150px; /* Fixed width for labels */
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4a69ff;
+  box-shadow: 0 0 8px rgba(74, 105, 255, 0.4);
+  transform: scale(1.02);
+}
+
+input[type="color"],
+input[type="file"],
+input[type="range"],
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .screen-container {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.options-container.hidden {
+  display: none;
+}
+
+@media (max-width: 425px) {
+  .screen-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .toggle-btn {
+    display: block;
+    margin: auto;
+  }
+
+  .options-container {
+    transition: max-height 0.3s ease-in-out;
+    overflow-y: auto; 
+  }
+
+  .options-container {
+    box-shadow: none !important;
+    border-bottom: none !important;
+  }
+}
+
+.custom-checkbox {
+  width: 20px; 
+  height: 20px;
+}
+
+.screen2_main_tagname {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Add some space between rows */
+}
+
+.screen2_main_tagname label {
+  margin-right: 30px; 
+}
+
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.screen2_special
+{
+  margin-top:10px;
+}
+
+.screen2_select
+{
+  width:33%;
+}

@@ -1,0 +1,210 @@
+[
+    {
+      "label": "Security Options",
+      "children": [
+        {
+          "type": "text",
+          "label": "Security Level",
+          "placeholder": "Enter security level"
+        },
+        {
+          "type": "password",
+          "label": "Security Code",
+          "placeholder": "Enter security code"
+        },
+        {
+          "type": "checkbox",
+          "label": "Enable Security"
+        }
+      ]
+    },
+    {
+      "label": "Control and I/O Network",
+      "children": [
+        {
+          "type": "text",
+          "label": "Network Name",
+          "placeholder": "Enter network name"
+        },
+        {
+          "type": "text",
+          "label": "Network Type",
+          "placeholder": "Enter network type"
+        }
+      ]
+    },
+    {
+      "label": "Server History",
+      "children": [
+        {
+          "type": "number",
+          "label": "History Duration",
+          "placeholder": "Enter duration in days"
+        }
+      ]
+    },
+    {
+      "label": "Server Displays",
+      "children": [
+        {
+          "type": "text",
+          "label": "Display Resolution",
+          "placeholder": "Enter resolution"
+        }
+      ]
+    },
+    {
+      "label": "Control Confirmation",
+      "children": [
+        {
+          "type": "checkbox",
+          "label": "Confirmation Required"
+        }
+      ]
+    },
+    {
+      "label": "QVCS",
+      "children": [
+        {
+          "type": "text",
+          "label": "QVCS Mode",
+          "placeholder": "Enter QVCS mode"
+        }
+      ]
+    },
+    {
+      "label": "Identification",
+      "children": [
+        {
+          "type": "text",
+          "label": "User ID",
+          "placeholder": "Enter user ID"
+        },
+        {
+          "type": "text",
+          "label": "User Name",
+          "placeholder": "Enter user name"
+        }
+      ]
+    },
+    {
+      "label": "System Time",
+      "children": [
+        {
+          "type": "datetime-local",
+          "label": "System Time"
+        }
+      ]
+    },
+    {
+      "label": "Statistics",
+      "children": [
+        {
+          "type": "number",
+          "label": "Uptime",
+          "placeholder": "Enter uptime in hours"
+        },
+        {
+          "type": "number",
+          "label": "Downtime",
+          "placeholder": "Enter downtime in hours"
+        }
+      ]
+    },
+    {
+      "label": "Peer Connections",
+      "children": [
+        {
+          "type": "text",
+          "label": "Peer Name",
+          "placeholder": "Enter peer name"
+        },
+        {
+          "type": "text",
+          "label": "Peer IP",
+          "placeholder": "Enter peer IP address"
+        }
+      ]
+    },
+    {
+      "label": "Hardware Information",
+      "children": [
+        {
+          "type": "text",
+          "label": "Hardware Model",
+          "placeholder": "Enter hardware model"
+        },
+        {
+          "type": "text",
+          "label": "Serial Number",
+          "placeholder": "Enter serial number"
+        }
+      ]
+    },
+    {
+      "label": "FTE",
+      "children": [
+        {
+          "type": "text",
+          "label": "FTE Mode",
+          "placeholder": "Enter FTE mode"
+        }
+      ]
+    },
+    {
+      "label": "UDP/TCP",
+      "children": [
+        {
+          "type": "text",
+          "label": "UDP Port",
+          "placeholder": "Enter UDP port"
+        },
+        {
+          "type": "text",
+          "label": "TCP Port",
+          "placeholder": "Enter TCP port"
+        }
+      ]
+    },
+    {
+      "label": "IP/ICMP",
+      "children": [
+        {
+          "type": "text",
+          "label": "IP Address",
+          "placeholder": "Enter IP address"
+        },
+        {
+          "type": "text",
+          "label": "ICMP Type",
+          "placeholder": "Enter ICMP type"
+        }
+      ]
+    },
+    {
+      "label": "Soft Failures",
+      "children": [
+        {
+          "type": "number",
+          "label": "Failure Count",
+          "placeholder": "Enter failure count"
+        }
+      ]
+    },
+    {
+      "label": "PDA Statistics",
+      "children": [
+        {
+          "type": "number",
+          "label": "PDA Uptime",
+          "placeholder": "Enter PDA uptime in hours"
+        },
+        {
+          "type": "number",
+          "label": "PDA Downtime",
+          "placeholder": "Enter PDA downtime in hours"
+        }
+      ]
+    }
+  ]
+  

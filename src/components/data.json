@@ -24,7 +24,8 @@
           {
             "label": "IOLINK_154"
           }
-        ]
+        ],
+        "link":"/screen2"
       },
       {
         "label": "C300_sim",
@@ -48,7 +49,8 @@
           {
             "label": "IOLINK_154"
           }
-        ]
+        ],
+        "link":"/screen3"
       },
       {
         "label": "FIM4_299",
@@ -59,7 +61,8 @@
           {
             "label": "Child2"
           }
-        ]
+        ],
+        "link":"/screen4"
       },
       {
         "label": "Unassigned",
@@ -82,7 +85,8 @@
           {
             "label": "example_pidloop"
           }
-        ]
+        ],
+        "link":"/screen5"
       }
     ]
   }
