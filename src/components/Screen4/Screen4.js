@@ -27,7 +27,6 @@ const Screen4 = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Find the selected option's corresponding fields from optionsContent.json
   const selectedOptionContent = optionsContent.find(
     (item) => item.label === selectedOption
   );

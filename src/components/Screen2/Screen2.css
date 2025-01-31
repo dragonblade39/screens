@@ -1,15 +1,25 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
 .screen-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; 
-  overflow: hidden; 
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 10px;
 }
 
 label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #333;
-  flex: 0 0 150px; /* Fixed width for labels */
 }
 
 input:focus,
@@ -17,7 +27,6 @@ textarea:focus {
   outline: none;
   border-color: #4a69ff;
   box-shadow: 0 0 8px rgba(74, 105, 255, 0.4);
-  transform: scale(1.02);
 }
 
 input[type="color"],
@@ -33,30 +42,197 @@ textarea {
   resize: none;
 }
 
-@media (max-width: 768px) {
-  .screen-container {
-    flex-direction: column;
-    width: 90%;
-  }
+.toggle-btn {
+  background: #4a69ff;
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
-.toggle-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 10px;
-  margin-bottom: 5px;
+.toggle-btn:hover {
+  background-color: #3b59d1;
 }
 
 .options-container.hidden {
   display: none;
 }
 
-@media (max-width: 425px) {
-  .screen-container {
+.screen2_main_tagname {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+.screen2_main_tagname label {
+  margin-right: 15px;
+  color: #555;
+  flex: 0 0 35%; 
+}
+
+.screen2_main_tagname input,
+.screen2_main_tagname select {
+  flex-grow: 1; 
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.screen2_main_tagname select {
+  background-color: #f1f1f1;
+}
+
+.screen2_select {
+  width: 33%;
+}
+
+.content-container {
+  display: flex;
+  flex-grow: 1;
+  overflow-y: auto;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+.content-container_tag-name{
+  padding-left: 20px ; 
+  padding-right: 20px ;
+  padding-top: 20px ;
+  padding-bottom: 0px ;
+  
+}
+
+
+.left-content,
+.right-content {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 250px; 
+}
+
+.left-content .input-fields,
+.right-content .input-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.screen2_special {
+  margin-top: 15px;
+}
+
+.network-config-container {
+  border: 2px solid #e4e4e4;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.network-config-container > .screen2_main_tagname {
+  margin-bottom: 10px;
+}
+
+.button-container {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f9f9f9;
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.screen2-button {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ok-btn {
+  background-color: #4a69ff;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.help-btn {
+  background-color: #f1f1f1;
+  color: #4a69ff;
+  border: 1px solid #4a69ff;
+}
+
+.screen2-button:hover {
+  transform: scale(1.05);
+}
+
+.screen2-button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 1024px) {
+  .content-container {
     flex-direction: column;
+    padding: 10px; 
+    gap: 20px;
+  }
+
+  .left-content,
+  .right-content {
     width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .screen2-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .screen2_main_tagname {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .screen2_main_tagname label {
+    margin-right: 0;
+    margin-bottom: 5px; 
+  }
+
+  .screen2_main_tagname input,
+  .screen2_main_tagname select {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .screen-container {
+    padding: 10px;
   }
 
   .toggle-btn {
@@ -66,44 +242,87 @@ textarea {
 
   .options-container {
     transition: max-height 0.3s ease-in-out;
-    overflow-y: auto; 
   }
 
   .options-container {
-    box-shadow: none !important;
-    border-bottom: none !important;
+    border-bottom: none;
+  }
+
+  .screen2_main_tagname input,
+  .screen2_main_tagname select {
+    width: auto;
+    max-width: 300px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .screen2_main_tagname {
+    flex-direction: column;
+  }
+
+  
+  .screen2_main_tagname label {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .screen2_main_tagname input,
+  .screen2_main_tagname select {
+    font-size: 14px;
+    padding: 6px;
   }
 }
 
-.custom-checkbox {
-  width: 20px; 
-  height: 20px;
+@media (max-width: 425px) {
+  .screen-container {
+    padding: 10px;
+  }
+
+  .toggle-btn {
+    display: block;
+    margin: auto;
+  }
+
+  .screen2_main_tagname {
+    flex-direction: column;
+  }
+
+  .screen2_main_tagname label {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .screen2_main_tagname input,
+  .screen2_main_tagname select {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .screen2_select {
+    width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .screen2-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
-.screen2_main_tagname {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px; /* Add some space between rows */
+.screen2_lineinsert{
+  margin-bottom: 10px;
 }
 
-.screen2_main_tagname label {
-  margin-right: 30px; 
-}
-
-
-.input-fields {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.screen2_special
-{
-  margin-top:10px;
-}
-
-.screen2_select
-{
-  width:33%;
+.screen2_resetbutton{
+  padding:7px;
 }
